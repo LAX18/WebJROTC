@@ -13,7 +13,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/LAX18/General/messaging2/index.html",
+  "start_url": "/WebJROTC/index.html",
+  "scope": "/",
   "background_color": "#3f51b5",
   "display": "standalone",
   "theme_color": "#3f51b5"

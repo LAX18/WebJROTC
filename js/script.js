@@ -17,7 +17,7 @@ function signUpList() {
 function externalOnLoad() {
     var isMobile = window.orientation > -1;
     if (isMobile) {
-        location.href = "https://s.codetasty.com/LAX18/General/mobile/index.html"
+        location.href = "https://lax18.github.io/WebJROTC/index.html"
     }
     console.log("[index.html] LOADED")
     var data = readData("nextevent", function(data) {

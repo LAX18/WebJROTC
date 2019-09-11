@@ -35,6 +35,7 @@ function externalOnLoad() {
             document.getElementById("event_place").innerHTML = "N/A"
         }
     })
+   checkLogin();
 }
 
 // Firebase Scripts

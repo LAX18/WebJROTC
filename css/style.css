@@ -1,3 +1,7 @@
+.accountbutton {
+  display: inline-block;
+}
+
 .centere {
   width: 100%;
   text-align: center

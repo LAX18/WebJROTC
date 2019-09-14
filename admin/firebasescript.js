@@ -1,4 +1,27 @@
 // JROTC Firebase Interaction Script
+// Bravo Company Comment Send
+function bravoComment() {
+  sendData("company/bravocomments",document.getElementById("bravocomments").value)
+  document.getElementById('bravocomments').value = '';
+}
+// Alpha Company Comment Send
+function alphaComment() {
+  sendData("company/alphacomments",document.getElementById("alphacomments").value)
+  document.getElementById('alphacomments').value = '';
+}
+// Commanders Cup Point Send
+function alphaSend() {
+  sendData("company/alphapoints", document.getElementById("alpha").value);
+  document.getElementById('alpha').value = '';
+}
+
+// Bravo Point Send
+function bravoSend() {
+  sendData("company/bravopoints", document.getElementById("bravo").value);
+  document.getElementById('bravo').value = '';
+}
+
+
 // Time Change Function (Global)
 function timeConvert(timestring) {
   var year = timestring.substring(0,4)
@@ -69,14 +92,4 @@ function eventSend() {
   document.getElementById('location').value = '';
   //document.getElementById('event').value = '';
   document.getElementById('custommessage').value = '';
-}
-
-function cupSend() {
-  var array = {
-    Alpha: document.getElementById("alpha").value,
-    Bravo: document.getElementById("bravo").value
-  }
-  sendData("commanderscup/", array);
-  document.getElementById('alpha').value = '';
-  document.getElementById('bravo').value = '';
 }

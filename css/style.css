@@ -75,6 +75,18 @@ table {
   background-color: white;
 }
 
+.alphacompany > .mdl-card__title {
+  color: #000;
+  background: url('../alpha.png') bottom right 15% no-repeat #46B6AC;
+  background-color: white;
+}
+
+.bravocompany > .mdl-card__title {
+  color: #000;
+  background: url('../bravo.png') bottom right 15% no-repeat #46B6AC;
+  background-color: white;
+}
+
 .calendar.mdl-card {
   width: 320px;
   height: 320px;

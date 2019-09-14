@@ -125,15 +125,66 @@
             <br><i class="material-icons" style="font-size: 18px;padding-right: 5px;">room</i><span id="event_place">Loading...</span>
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    Go to Calendar
-                    </a>
+            <h6>(Preview)</h6>
             <div class="mdl-layout-spacer"></div>
             <i class="material-icons">event</i>
           </div>
         </div>
             </td>
             </tr>
+        </table>
+        <table>
+          <tr>
+            <td>
+            <div class="mdl-card mdl-shadow--2dp" style="">
+              <div class="mdl-card__actions" style="text-align: center;margins: auto">
+                Alpha Company Points:<br>
+                <h3>
+                  Current:
+                </h3>
+                <h4>
+                  <div id="alphacurrentpoints">Loading</div></h4>
+              New Point Total:
+              <input type="text" id="alpha"><br>
+              <input type="submit" value="Update" onclick="alphaSend()"><br>
+              Comments:<br>
+                <textarea id="alphacomments"></textarea><br>
+                <input type="submit" value="Send Comment" onclick="alphaComment()">
+              </div>
+              </div>
+            </td>
+            <td>
+            <div class="mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title" style="text-align: center;margins: auto">
+                Push Notification
+              </div>
+              <div class="mdl-card__actions" style="text-align: center;margins: auto">
+                Login with NokomisJROTC Google Account to Push Notifications<br>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="window.open('https://app.letreach.com/5d5daebbddb25e461d8b465c');">
+                  Open Notification Manager
+                </button>
+              </div>
+            </div>
+            </td>
+                        <td>
+            <div class="mdl-card mdl-shadow--2dp" style="">
+              <div class="mdl-card__actions" style="text-align: center;margins: auto">
+                Bravo Company Points:<br>
+                <h3>
+                  Current:
+                </h3>
+                <h4>
+                  <div id="bravocurrentpoints">Loading</div></h4>
+              New Point Total:
+              <input type="text" id="bravo"><br>
+              <input type="submit" value="Update" onclick="bravoSend()"><br>
+              Comments:<br>
+                <textarea id="bravocomments"></textarea><br>
+                <input type="submit" value="Send Comment" onclick="bravoComment()">
+              </div>
+              </div>
+            </td>
+          </tr>
         </table>
       </div>
     </main>

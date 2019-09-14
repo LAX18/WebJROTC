@@ -2,6 +2,10 @@ function externalOnLoad() {
   verify();
   timeChange();
   updatePage();
+  readData("company", function(data) {
+        document.getElementById("alphacurrentpoints").innerHTML = data.alphapoints
+        document.getElementById("bravocurrentpoints").innerHTML = data.bravopoints
+  });
   window.setInterval(verify(),1000);
 }
 

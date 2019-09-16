@@ -8,7 +8,7 @@ function checkLogin() {
   firebase.auth().onAuthStateChanged(function(user) {
      if (user) {
         readData("users", function(array) {
-        if (array[firebase.auth().currentUser.uid]) {
+        if (array[firebase.auth().currentUser.email.replace("@","|").replace(".",",")]) {
                    document.getElementById("loginbutton").innerHTML = "<button class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' onclick='dashboard();'>Dashboard</button>";
                    document.getElementById("logoutbutton").style.display = "block"
                    componentHandler.upgradeDom();

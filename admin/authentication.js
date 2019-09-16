@@ -3,7 +3,7 @@ function checkLogin() {
   firebase.auth().onAuthStateChanged(function(user) {
      if (user) {
         readData("users", function(array) {
-        if (array[firebase.auth().currentUser.uid]) {
+        if (array[firebase.auth().currentUser.email.replace("@","|").replace(".",",")]) {
                    document.getElementById("loginbutton").innerHTML = "<a href='dashboard.html'>Dashboard</a>"
                    var logoutnode = document.createElement("li");
                    document.getElementById("logoutbutton").style.display = "block"

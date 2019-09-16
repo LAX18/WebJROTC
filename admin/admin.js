@@ -14,7 +14,7 @@ function verify() {
   firebase.auth().onAuthStateChanged(function(user) {
      if (user) {
         readData("users", function(array) {
-               if (array[firebase.auth().currentUser.uid]) {
+               if (array[firebase.auth().currentUser.email.replace("@","|").replace(".",",")]) {
                document.getElementById("page-content").style.display = "block"
                document.getElementById("unauthorized").style.display = "none"
                } else {

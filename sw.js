@@ -1,4 +1,3 @@
-importScripts('https://cdn.letreach.com/js/sworkers/a99d6ff3dec6106a641e37d249ac4762.js');
 // Offline SW
 const filesToCache = [
   'https://lax18.github.io/WebJROTC/css/font.css',

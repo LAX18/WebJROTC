@@ -1,19 +1,3 @@
-// Get List of SignUps
-function signUpList() {
-    database = firebase.database().ref("signup");
-    database.once('value', function(snapshot) {
-        snapshot.forEach(function(child) {
-            firebase.database().ref("signup/" + child["key"]).on('value', function(data) {
-                var data1 = data.val();
-                var a = document.createElement("tr");
-                a.innerHTML = "<td class='mdl-data-table__cell--non-numeric no-under' id='sign-name'><a href='"+data1["link"]+"'>"+child["key"]+"</a></td><td class='mdl-data-table__cell--non-numeric' id='sign-date'>"+data1["date"]+"</td><td class='mdl-data-table__cell--non-numeric no-under' id='sign-info'><a href='"+data1["infolink"]+"'>Info</a></td>"
-                document.getElementById("table-body").appendChild(a)
-                componentHandler.upgradeAllRegistered();
-            });
-        });
-    });
-}
-
 function externalOnLoad() {
     var isMobile = window.orientation > -1;
     if (isMobile) {

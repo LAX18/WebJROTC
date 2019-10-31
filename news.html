@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Nokomis JROTC</title>
+  <script src="//cdn.letreach.com/js/main/a99d6ff3dec6106a641e37d249ac4762.js"></script>
+  <link rel="manifest" href="https://lax18.github.io/WebJROTC/manifest.json">
+  <link rel="stylesheet" href="https://lax18.github.io/WebJROTC/css/font.css">
+  <link rel="stylesheet" href="https://lax18.github.io/WebJROTC/css/material.indigo-red.min.css">
+  <link rel="stylesheet" href="https://lax18.github.io/WebJROTC/css/style.css">
+  <script src="js/authentication.js"></script>
+  <script src="https://lax18.github.io/WebJROTC/js/material.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+  <script src="nscript.js"></script>
+  <meta name="theme-color" content="#3f51b5">
+  <link rel="apple-touch-icon" sizes="57x57" href="/WebJROTC/assets/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/WebJROTC/assets/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/WebJROTC/assets/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/WebJROTC/assets/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/WebJROTC/assets/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/WebJROTC/assets/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/WebJROTC/assets/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/WebJROTC/assets/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/WebJROTC/assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/WebJROTC/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="/WebJROTC/assets/favicons/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/WebJROTC/assets/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/WebJROTC/assets/favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="/WebJROTC/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="apple-mobile-web-app-title" content="JROTC">
+  <meta name="application-name" content="JROTC">
+  <meta name="msapplication-TileColor" content="#3f51b5">
+  <script>
+    function onLoad() {
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB0keF26uKYDOR2o-8HYkgoOGWhsPyHdkg",
+        authDomain: "jrotc-database.firebaseapp.com",
+        databaseURL: "https://jrotc-database.firebaseio.com",
+        projectId: "jrotc-database",
+        storageBucket: "jrotc-database.appspot.com",
+        messagingSenderId: "787128694744"
+      };
+      firebase.initializeApp(config);
+      navigator.serviceWorker.register('sw.js');
+      externalOnLoad();
+    }
+  </script>
+</head>
+
+<body onload="onLoad()">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">News</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <div class="clickable"><i class="material-icons" onclick="location.href='info.html'">info</i></div>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Nokomis JROTC</span>
+      <nav class="mdl-navigation">
+        <div id="loginbutton" class="accountbutton">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="logIn();">
+          Log In
+          </button>
+        </div>
+        <div id="logoutbutton" class="accountbutton" style="display: none;">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="logOut();">
+          Log Out
+        </button>
+        </div>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <div id="news-holder">
+      </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+.news-item:nth-child(odd) {background: #CCC}
+
 .accountbutton {
   display: inline-block;
 }

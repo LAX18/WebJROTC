@@ -1,5 +1,5 @@
 // Ribbon Rack Builder
-// v.2
+// v.2.0.1
 //
 //
 // (C) 2019 Nicholas Pease
@@ -17,7 +17,7 @@ function onLoad() {
 		var newelement = document.createElement("span")
 		newelement.setAttribute("class", "ribbon-selector-span")
 		if (i <= 1) {
-			newelement.innerHTML = "<div id='ribbons-selector'> <div class='ribbon-card mdl-card mdl-shadow--2dp'> <div class='mdl-card__title'> <h2 class='mdl-card__title-text'>" + ribbon_name[i] + "<br>&nbsp</h2> </div> <div class='mdl-card__media'> <img src='assets/ribbons/" + ribbon_filename[i] + ".gif' width='154px' height='42px' border='0' alt='' style='padding:10px;'> </div> <div class='mdl-card__supporting-text'> <img src='assets/add.png' onclick='addRibbon(" + i + ");' class='clickable'><img src='assets/subtract.png' onclick='subtractRibbon(" + i + ");' class='clickable'> </div> </div> </div>"
+			newelement.innerHTML = "<div id='ribbons-selector'> <div class='ribbon-card "+ribbon_name[i]+" mdl-card mdl-shadow--2dp'> <div class='mdl-card__title'> <h2 class='mdl-card__title-text'>" + ribbon_name[i] + "<br>&nbsp</h2> </div> <div class='mdl-card__media'> <img src='assets/ribbons/" + ribbon_filename[i] + ".gif' width='154px' height='42px' border='0' alt='' style='padding:10px;'> </div> <div class='mdl-card__supporting-text'> <img src='assets/add.png' onclick='addRibbon(" + i + ");' class='clickable'><img src='assets/subtract.png' onclick='subtractRibbon(" + i + ");' class='clickable'> </div> </div> </div>"
 		} else {
 			newelement.innerHTML = "<div id='ribbons-selector'> <div class='ribbon-card mdl-card mdl-shadow--2dp'> <div class='mdl-card__title'> <h2 class='mdl-card__title-text'>" + ribbon_name[i] + "<br>" + ribbon_filename[i] + "</h2> </div> <div class='mdl-card__media'> <img src='assets/ribbons/" + ribbon_filename[i] + ".gif' width='154px' height='42px' border='0' alt='' style='padding:10px;'> </div> <div class='mdl-card__supporting-text'> <img src='assets/add.png' onclick='addRibbon(" + i + ");' class='clickable'><img src='assets/subtract.png' onclick='subtractRibbon(" + i + ");' class='clickable'> </div> </div> </div>"
 		}
@@ -47,6 +47,7 @@ function updatePage() {
 			img.setAttribute("src", "assets/ribbons/" + ribbon_filename[i] + ".gif");
 			img.setAttribute("width", "33%");
 			img.setAttribute("class", "ribbons")
+      var ribbbonselector = document.getElementById()
 			if (ribbons <= 3) {
 				console.log(rows)
 				img.setAttribute("id",ribbons)

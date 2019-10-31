@@ -1,7 +1,7 @@
 function externalOnLoad() {
     var isMobile = window.orientation > -1;
     if (isMobile) {
-        location.href = "https://lax18.github.io/WebJROTC/index.html"
+        location.href = "https://lax18.github.io/MobileJROTC/index.html"
     }
     console.log("[index.html] LOADED")
     var data = readData("nextevent", function(data) {

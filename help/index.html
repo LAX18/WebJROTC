@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Nokomis JROTC - Help</title>
+  <script src="//cdn.letreach.com/js/main/a99d6ff3dec6106a641e37d249ac4762.js"></script>
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/material.indigo-red.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="../js/material.min.js"></script>
+  <script src="../js/firebase.js"></script>
+  <link rel="apple-touch-icon" sizes="57x57" href="/LAX18/General/messaging2/assets/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/LAX18/General/messaging2/assets/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/LAX18/General/messaging2/assets/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/LAX18/General/messaging2/assets/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/LAX18/General/messaging2/assets/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/LAX18/General/messaging2/assets/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/LAX18/General/messaging2/assets/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/LAX18/General/messaging2/assets/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/LAX18/General/messaging2/assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/LAX18/General/messaging2/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="/LAX18/General/messaging2/assets/favicons/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/LAX18/General/messaging2/assets/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/LAX18/General/messaging2/assets/favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="/LAX18/General/messaging2/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="apple-mobile-web-app-title" content="JROTC">
+  <meta name="application-name" content="JROTC">
+  <meta name="msapplication-TileColor" content="#3f51b5">
+  <script>
+    function onLoad() {
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB0keF26uKYDOR2o-8HYkgoOGWhsPyHdkg",
+        authDomain: "jrotc-database.firebaseapp.com",
+        databaseURL: "https://jrotc-database.firebaseio.com",
+        projectId: "jrotc-database",
+        storageBucket: "jrotc-database.appspot.com",
+        messagingSenderId: "787128694744"
+      };
+      firebase.initializeApp(config);
+      externalOnLoad();
+    };
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3f51b5">
+</head>
+
+<body onload="onLoad()">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <button class="mdl-layout__drawer-button mdl-button mdl-js-button mdl-button--icon" onclick="history.go(-1);">
+        <i class="material-icons">arrow_back</i>
+      </button>
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Help</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <section class="docs-toc">
+        <h3>Nokomis JROTC Admin Help</h3>
+        <h4>Contents</h4>
+        <nav class="section-content">
+          <ul>
+            <li><a href="#accounts">Account Login Information and External Services</a></li>
+            <li><a href="#nxtformation">Update Next Formation Event</a></li>
+            <li><a href="#companyupdate">Update Company Values and Comments</a></li>
+            <li><a href="#blogpost">Create a New Blog Post</a></li>
+            <li><a href="#pushnotification">Send a Push Notification</a></li>
+            <li><a href="#addadmin">Add a Admin</a></li>
+            <li><a href="#removeadmin">Remove an Admin</a></li>
+            <li><a href="#modifyapp">Modify the App [ADVANCED]</a></li>
+            <li><a href="#modifydatabase">Modify the Database [ADVANCED]</a></li>
+          </ul>
+        </nav>
+      </section>
+      <h3>
+        <a name="accounts">Account Login Information and External Services</a>
+      </h3>
+      For security purposes, the account information cannot be listed here. However, the email for the accounts is nokomisarmyjrotc@gmail.com.
+      The password is the same as the one used on the computers in the JROTC office.<br>
+      <br>
+      Here is the list of the external services that this app employs, their function, and their URL.
+      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="margin-left: 10px;">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Service Name</th>
+      <th class="mdl-data-table__cell--non-numeric">Function</th>
+      <th class="mdl-data-table__cell--non-numeric">URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Firebase</td>
+      <td class="mdl-data-table__cell--non-numeric">Database, Authentication, and Backend Services</td>
+      <td class="mdl-data-table__cell--non-numeric"><a href="https://console.firebase.google.com/u/0/">Open</a></td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">LetReach</td>
+      <td class="mdl-data-table__cell--non-numeric">Push Notification Service</td>
+      <td class="mdl-data-table__cell--non-numeric"><a href="https://app.letreach.com/5d5daebbddb25e461d8b465c">Open</a></td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Wordpress</td>
+      <td class="mdl-data-table__cell--non-numeric">Blog</td>
+      <td class="mdl-data-table__cell--non-numeric"><a href="">Open</a></td>
+    </tr>
+  </tbody>
+</table>
+      <h3>
+        <a name="nxtformation">Update Next Formation Event</a>
+      </h3>
+      To update the next event display found on the homepage, follow the steps below.
+      <h4>
+       1. Go to the <a href="../admin/index.html">Admin Console</a>.
+      </h4>
+      <h4>
+       2. Find the box as shown below.
+      </h4>
+      <img src="assets/updateformation.png">
+      <h4>
+       3. Fill in fields with information of the next formation.
+      </h4>
+      <h4>
+       4. Click "Preview" to see changes in the preview box.
+      </h4>
+      <img src="assets/preview.png">
+      <h4>
+       5. When satisfied with the results, press update to update homepage.
+      </h4>
+      <img src="assets/update.png">
+      <h3>
+        <a name="companyupdate">Update Company Values and Comments</a>
+      </h3>
+      To update the commanders cup points and the comments, located on the company pages, follow the steps below.
+      <h4>
+       1. Go to the <a href="../admin/index.html">Admin Console</a>.
+      </h4>
+      <h4>
+       2. Find the box as shown below.
+      </h4>
+      <h6>
+        Choose the box that corresponds to the company that you wish to edit 
+      </h6>
+      <img src="assets/companyselect.png">
+    </main>
+  </div>
+</body>
+
+</html>
